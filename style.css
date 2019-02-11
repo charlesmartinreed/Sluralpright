@@ -16,3 +16,106 @@ h5,
 h6 {
 	font-weight: 300;
 }
+
+#wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	/* default is row */
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+}
+
+#left {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	/* note: You need to set the height in order to be able to justify content */
+	min-height: 100vh;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+#right {
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+
+/* SIGN IN SECTION */
+#sign-in {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	width: 80%;
+	/* rem is a multiplier based upon the size set in the HTML element. 16px is default. */
+	padding-bottom: 1rem;
+}
+
+#sign-in form {
+	width: 80%;
+	padding-bottom: 3rem;
+}
+
+#sign-in .logo {
+	margin-bottom: 8vh;
+}
+
+#sign-in .logo img {
+	width: 300px;
+}
+
+#sign-in label {
+	font-size: 0.9rem;
+	line-height: 2rem;
+	font-weight: 500;
+}
+
+#sign-in .text-input {
+	margin-bottom: 1.3rem;
+	width: 100%;
+	border: 1px solid #555;
+	border-radius: 2px;
+	background: #181818;
+	color: #CCC;
+	padding: 0.5rem 1rem;
+	line-height: 1.3rem;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 1200px) {
+	#left {
+		-webkit-box-flex: 4;
+		    -ms-flex: 4;
+		        flex: 4;
+	}
+
+	#right {
+		-webkit-box-flex: 6;
+		    -ms-flex: 6;
+		        flex: 6;
+	}
+}
