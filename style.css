@@ -207,6 +207,35 @@ h6 {
 	color: #FF7B39;
 }
 
+/* SHOWCASE (right section) */
+#showcase {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	min-height: 100vh;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	background: url('images/login-bg.jpg') no-repeat center center / cover;
+	text-align: center;
+}
+
+#showcase .showcase-text {
+	font-size: 3rem;
+	width: 100%;
+	color: #FFF;
+	margin-bottom: 1.5rem;
+}
+
+#showcase .secondary-btn {
+	width: 60%;
+	/* button should always be in the middle */
+	margin: auto;
+}
+
 /* FOOTER */
 #main-footer {
 	text-align: center;
@@ -233,5 +262,35 @@ h6 {
 		-webkit-box-flex: 6;
 		    -ms-flex: 6;
 		        flex: 6;
+	}
+}
+
+@media (max-width: 768px) {
+	body {
+		/* brings back our scrolling */
+		overflow: auto;
+	}
+
+	#right {
+		display: none;
+	}
+
+	#left {
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		margin-top: 4vh;
+	}
+
+	#sign-in .logo {
+		margin-bottom: 2vh;
+	}
+
+	#sign-in .text-input {
+		margin-bottom: 0.7rem;
+	}
+
+	#main-footer {
+		padding-top: 1rem;
 	}
 }
